@@ -17,7 +17,7 @@ export async function execute(interaction) {
 	const ai = new GoogleGenAI({ apiKey: API_KEY });
 
 	const input = interaction.options.getString('text');
-	await interaction.reply({ content: '🧠 Thinking...', ephemeral: false});
+	await interaction.reply({ content: '🧠 Thinking...', ephemeral: false });
 
 	let aiResponse;
 
@@ -32,5 +32,5 @@ export async function execute(interaction) {
 		return interaction.editReply('❌ Failed to get response from OpenAI.');
 	}
 
-	interaction.editReply({ content: aiResponse, ephemeral: false});
+	interaction.editReply({ content: aiResponse, ephemeral: false });
 }
